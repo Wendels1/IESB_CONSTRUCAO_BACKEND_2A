@@ -1,5 +1,3 @@
-let prompt = require("prompt-sync")();
-
 const calc = require("./calculadora");
 
 console.log("Seja bem-vindo(a) a Calculadora em Node.js");
