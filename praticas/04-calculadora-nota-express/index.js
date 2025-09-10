@@ -3,6 +3,9 @@ const express = require('express')
 // crio uma instância do express
 const app = express()
 
+const cors = require('cors')
+app.use(cors())
+
 // Middlewares (Intermediários)
 // Intermediário de log
 app.use((req, res, next) => {
@@ -22,7 +25,7 @@ app.get('/nome', (req, res, next) => {
   res.send("Olá " + primeiroNome + " " + Sobrenome + "!!!") 
 })
 // Importando o router calculadora de nota
-const calculadoraNotaRouter = require('./routes/CalculadoraNota')
+const calculadoraNotaRouter = require('./routes/Calculadoranota')
 // Toda requisição que chegar na rota /calculadora vai para o router
 app.use('/calculadora', calculadoraNotaRouter)
 
