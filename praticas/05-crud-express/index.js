@@ -1,16 +1,21 @@
-const express = require('express');
-const cors = require('cors');
+// importa o express e cors
+const express = require('express')
+const cors = require('cors')
 
-const app = express();
+// crio uma instância da aplicação
+const app = express()
 
-app.use(cors());
-app.use(express.json());
+// intermediários
+// habilita o cors nas requisições
+app.use(cors()) 
+// habilita receber json no corpo da requisição
+app.use(express.json())
 
-const contatosRouter = require('./routes/Contatos');
-
+// roteadores (intermediário do tipo Router)
+const contatosRouter = require('./routes/Contatos')
 app.use(contatosRouter)
 
-
+// executar a aplicação
 app.listen(3000, () => {
-    console.log('Servidor rondando em http://localhost:3000');
-});
+  console.log("Aplicação rodando em http://localhost:3000")
+})
