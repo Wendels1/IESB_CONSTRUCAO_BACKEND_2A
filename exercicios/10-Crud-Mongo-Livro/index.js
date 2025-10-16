@@ -27,8 +27,10 @@ const livroModel = mongoose.model('Livros', new mongoose.Schema(
     {
         titulo: String,
         autor: String,
+        editora: String,
         ano: Number,
-        genero: String
+        preco: Number
+
     }
 ))
 
